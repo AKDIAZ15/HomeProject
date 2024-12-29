@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Interiors Consultation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@4.1.17/dist/framer-motion.min.js"></script>
+    <style>
+        /* <include src="styles.html"></include> */
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-100 to-white min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="navbar sticky top-0 z-50 shadow-lg">
+        <ul class="flex justify-center items-center py-4 px-6 space-x-6">
+            <li><a href="index.html"
+                    class="text-black font-bold py-2 px-4 rounded-full hover:bg-white hover:text-primary transition-all duration-300">Home</a>
+            </li>
+            <li><a href="hoameloans.html"
+                    class="text-black font-bold py-2 px-4 rounded-full hover:bg-white hover:text-primary transition-all duration-300">Home
+                    Loans</a></li>
+            <li><a href="homeinterior.html"
+                    class="text-black font-bold py-2 px-4 rounded-full hover:bg-white hover:text-primary transition-all duration-300">Home
+                    Interiors</a></li>
+            <li><a href="projects.html"
+                    class="text-black font-bold py-2 px-4 rounded-full hover:bg-white hover:text-primary transition-all duration-300">Projects</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Home Interiors Consultation Form -->
+    <div class="container max-w-4xl mx-auto my-8 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-3xl font-bold mb-6 text-center text-black">Home Interiors Consultation</h2>
+            <form action="#" method="POST" enctype="multipart/form-data" class="space-y-6">
+                <!-- General Preferences -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-paint-brush text-primary"></i>
+                    <label for="overall-vision" class="flex-grow text-black">What is your overall vision for the space?
+                        (e.g., Modern, Traditional, Minimalist, etc.)</label>
+                    <input type="text" id="overall-vision" name="overall-vision" placeholder="Describe your vision"
+                        required class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-palette text-primary"></i>
+                    <label for="color-scheme" class="flex-grow text-black">Do you have any color schemes or themes you
+                        prefer for your home?</label>
+                    <input type="text" id="color-scheme" name="color-scheme" placeholder="Color schemes or themes"
+                        required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Functionality and Layout -->
+                <div class="form-group">
+                    <label for="room-functions" class="text-black">What kind of functionality do you need in each room?
+                        (e.g., storage, workspaces, entertainment areas)</label>
+                    <textarea id="room-functions" name="room-functions"
+                        placeholder="Describe the functionality of the rooms" required
+                        class="w-full p-2 border rounded"></textarea>
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-arrows-alt text-primary"></i>
+                    <label for="multi-functional-spaces" class="flex-grow text-black">Do you need any spaces that serve
+                        multiple functions? (e.g., guest room/office)</label>
+                    <input type="text" id="multi-functional-spaces" name="multi-functional-spaces"
+                        placeholder="Describe multi-functional spaces" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-money-bill-wave text-primary"></i>
+                    <label for="budget" class="flex-grow text-black">What is your budget for this interior
+                        project?</label>
+                    <input type="number" id="budget" name="budget" placeholder="Enter your budget in INR" required
+                        class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Design Preferences -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-ruler-combined text-primary"></i>
+                    <label for="preferred-style" class="flex-grow text-black">Do you prefer a particular style? (e.g.,
+                        contemporary, vintage, Scandinavian, industrial, etc.)</label>
+                    <input type="text" id="preferred-style" name="preferred-style" placeholder="Preferred style"
+                        required class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-th text-primary"></i>
+                    <label for="material-preferences" class="flex-grow text-black">Are there any materials you prefer or
+                        want to avoid? (e.g., wood, metal, fabric, leather)</label>
+                    <input type="text" id="material-preferences" name="material-preferences"
+                        placeholder="Material preferences" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Space, Storage & Lifestyle -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-expand-arrows-alt text-primary"></i>
+                    <label for="space-needs" class="flex-grow text-black">Are you looking to maximize space? (e.g.,
+                        storage solutions, open shelving)</label>
+                    <input type="text" id="space-needs" name="space-needs" placeholder="Maximizing space needs" required
+                        class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-users text-primary"></i>
+                    <label for="number-of-residents" class="flex-grow text-black">How many people live in the space? Do
+                        you have children or pets?</label>
+                    <input type="number" id="number-of-residents" name="number-of-residents"
+                        placeholder="Number of residents" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Lighting and Ambience -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-lightbulb text-primary"></i>
+                    <label for="lighting-preferences" class="flex-grow text-black">What kind of lighting do you prefer?
+                        (ambient, task, accent lighting)</label>
+                    <input type="text" id="lighting-preferences" name="lighting-preferences"
+                        placeholder="Lighting preferences" required class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-sun text-primary"></i>
+                    <label for="natural-light" class="flex-grow text-black">Do you have any natural light
+                        considerations? (e.g., need for blinds or curtains)</label>
+                    <input type="text" id="natural-light" name="natural-light"
+                        placeholder="Natural light considerations" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Customization and Personalization -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-couch text-primary"></i>
+                    <label for="custom-furniture" class="flex-grow text-black">Would you like custom furniture, or would
+                        you prefer ready-made pieces?</label>
+                    <input type="text" id="custom-furniture" name="custom-furniture"
+                        placeholder="Custom or ready-made furniture" required class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-heart text-primary"></i>
+                    <label for="personal-items" class="flex-grow text-black">Do you want to include any personal items
+                        or family heirlooms in the design?</label>
+                    <input type="text" id="personal-items" name="personal-items"
+                        placeholder="Personal items or heirlooms" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Technology and Maintenance -->
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-microchip text-primary"></i>
+                    <label for="smart-home" class="flex-grow text-black">Are you interested in smart home technology or
+                        automation? (e.g., smart lighting, security systems)</label>
+                    <input type="text" id="smart-home" name="smart-home" placeholder="Smart home preferences" required
+                        class="w-full p-2 border rounded">
+                </div>
+
+                <div class="form-group flex items-center space-x-2">
+                    <i class="fas fa-tools text-primary"></i>
+                    <label for="maintenance-preferences" class="flex-grow text-black">How much maintenance are you
+                        comfortable with? (e.g., cleaning fabric vs. leather, high-maintenance materials)</label>
+                    <input type="text" id="maintenance-preferences" name="maintenance-preferences"
+                        placeholder="Maintenance preferences" required class="w-full p-2 border rounded">
+                </div>
+
+                <!-- Submit -->
+                <button type="submit"
+                    class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">Submit
+                    Your Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">© 2024 Property Finder. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-accent transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-accent transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

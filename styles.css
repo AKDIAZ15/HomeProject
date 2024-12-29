@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --accent-color: #f39c12;
+    --text-color: #000000;
+    --bg-color: #ecf0f1;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--white) 100%);
+    color: black;
+    margin-top: 64px;
+    /* Changed from padding-top to margin-top */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    /* Fixed height */
+    z-index: 1000;
+    background: white;
+    /* Solid white background */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+}
+
+.navbar ul {
+    height: 100%;
+    /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+    background: none;
+    /* Remove gradient background */
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+    background: none;
+    /* Remove gradient background */
+    transform: none;
+    /* Remove transform */
+    box-shadow: none;
+    /* Remove shadow */
+}
+
+
+.property-item,
+.project-item {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--white) 0%, var(--bg-color) 100%);
+}
+
+.property-item:hover,
+.project-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.property-item img,
+.project-item img {
+    transition: transform 0.5s ease;
+}
+
+.property-item:hover img,
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li a {
+    transition: all 0.3s ease;
+}
+
+.footer {
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
+    color: var(--white);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%);
+}
+
+.shine-effect:hover::after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+header {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
